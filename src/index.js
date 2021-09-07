@@ -90,17 +90,11 @@ class App extends Component {
               {this.state.items.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
                   {(provided, snapshot) => (
-                    <div {...provided.dragHandleProps}>
-                      <div
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        className={`draggable-box ${snapshot.isDragging ? 'draggable-ing' : ''}`}
-                      >
+                    <div {...provided.dragHandleProps} className={`draggable-box ${snapshot.isDragging ? 'draggable-ing' : ''}`}>
+                      <div ref={provided.innerRef} {...provided.draggableProps}>
                         <div onClick={() => { this.toggleChange(index) }} className="draggable-toggle-icon">toggle</div>
                         {item.content}
-                        {item.childrenShow &&
-                          <SubItems items={item.subItems} droppableId={item.id} type={`droppableSubItem-${item.id}`} />
-                        }
+                        {item.childrenShow && <SubItems items={item.subItems} droppableId={item.id} type={`droppableSubItem-${item.id}`} />}
                       </div>
                       {provided.placeholder}
                     </div>

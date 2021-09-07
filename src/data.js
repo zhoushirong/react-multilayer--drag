@@ -2,6 +2,7 @@ export const static_items = [
   {
     id: 'id1',
     content: "item 1 content",
+    childrenShow: true,
     subItems: [
       {
         id: 'id10',
@@ -24,6 +25,20 @@ export const static_items = [
       {
         id: 'id21',
         content: "SubItem 21 content",
+      },
+    ],
+  },
+  {
+    id: 'id3',
+    content: "item 3 content",
+    subItems: [
+      {
+        id: 'id30',
+        content: "SubItem 30 content",
+      },
+      {
+        id: 'id31',
+        content: "SubItem 31 content",
       },
     ],
   },
