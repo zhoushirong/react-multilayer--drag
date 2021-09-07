@@ -1,0 +1,27 @@
+.draggable-box {
+  margin-top: 5px;
+  background: #efefef;
+}
+.child-draggable-box {
+  margin-top: 1px;
+  background: #efefef;
+}
+.draggable-toggle-icon {
+  display: inline-block;
+  padding: 3px;
+  color: #06f;
+}
+
+.draggable-ing {
+  background: #09f;
+}
+.draggable-over {
+  background: #efefef;
+}
+
+.child-draggable-box-ing {
+  background: #09f;
+}
+.child-draggable-box-over {
+  background: #efefef;
+}
